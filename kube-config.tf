@@ -6,7 +6,8 @@ resource "null_resource" "get-kube-config" {
 }
 
 provider "kubernetes" {
-  config_path    = "~/.kube/config"
+#  config_path    = "~/.kube/config"
+  config_path     = "/home/centos/.kube/config"
   config_context = aws_eks_cluster.eks.arn
 }
 
